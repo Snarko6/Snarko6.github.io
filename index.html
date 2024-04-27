@@ -1,121 +1,61 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Code Uchiha</title>
+  <title>Calculator</title>
   <style>
     body {
-      background-color: #000;
-      color: #ff0000;
+      background-color: #0f0f0f;
+      color: #00ff00;
+      font-family:  Courier New , monospace;
+    }
+    .calculator {
+      width: 250px;
+      margin: 20px auto;
+      padding: 10px;
+      border: 2px solid #00ff00;
+      border-radius: 5px;
       text-align: center;
-      font-family: "Courier New", monospace;
+      background-color: #111111;
     }
-
-    h1 {
-      color: #f00;
-      font-size: 36px;
-    }
-
-    .image-container {
-      margin-top: 20px;
-    }
-
-    img {
-      width: 300px;
-      border-radius: 50%;
-    }
-
-    .story {
-      margin: 20px;
-      padding: 20px;
-      background-color: rgba(0, 0, 0, 0.8);
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    }
-
-    .audio-controls {
-      margin-top: 20px;
-    }
-
-    .hacker-button {
-      background-color: #000;
-      color: #f00;
-      border: 2px solid #f00;
-      padding: 10px 20px;
-      font-size: 16px;
-      cursor: pointer;
-      margin-right: 10px;
-    }
-
-    .hacker-button:hover {
-      background-color: #f00;
-      color: #fff;
-    }
-
-    .contact-details {
-      margin-top: 20px;
-      color: #fff;
-    }
-
-    .copyright {
-      margin-top: 20px;
-      color: #fff;
+    input[type="text"], input[type="button"] {
+      width: 40px;
+      height: 40px;
+      margin: 5px;
+      font-size: 20px;
+      color: #00ff00;
+      background-color: #0f0f0f;
+      border: 1px solid #00ff00;
     }
   </style>
-  <script>
-    window.onload = function() {
-      const audio = new Audio('jchrist.mp3');
-      const playButton = document.getElementById('play-btn');
-      const stopButton = document.getElementById('stop-btn');
-
-      playButton.addEventListener('click', () => {
-        audio.play();
-      });
-
-      stopButton.addEventListener('click', () => {
-        audio.pause();
-        audio.currentTime = 0;
-      });
-    };
-
-    document.addEventListener('contextmenu', event => event.preventDefault()); // Disable right-click context menu
-    document.onkeydown = function (e) { // Disable copy, cut, and paste
-      if (e.ctrlKey && (e.keyCode === 67 || e.keyCode === 86 || e.keyCode === 85)) {
-        return false;
-      } else {
-        return true;
-      }
-    };
-  </script>
 </head>
 <body>
-  <h1>Code Uchiha</h1>
-
-  <div class="image-container">
-    <img src="Uchiha.jpg" alt="Uchiha Clan">
+  <div class="calculator">
+    <input type="text" id="display" disabled>
+    <br>
+    <input type="button" value="1" onclick="document.getElementById( display ).value +=  1 ">
+    <input type="button" value="2" onclick="document.getElementById( display ).value +=  2 ">
+    <input type="button" value="3" onclick="document.getElementById( display ).value +=  3 ">
+    <input type="button" value="+" onclick="document.getElementById( display ).value +=  + ">
+    <br>
+    <input type="button" value="4" onclick="document.getElementById( display ).value +=  4 ">
+    <input type="button" value="5" onclick="document.getElementById( display ).value +=  5 ">
+    <input type="button" value="6" onclick="document.getElementById( display ).value +=  6 ">
+    <input type="button" value="-" onclick="document.getElementById( display ).value +=  - ">
+    <br>
+    <input type="button" value="7" onclick="document.getElementById( display ).value +=  7 ">
+    <input type="button" value="8" onclick="document.getElementById( display ).value +=  8 ">
+    <input type="button" value="9" onclick="document.getElementById( display ).value +=  9 ">
+    <input type="button" value="_" onclick="document.getElementById( display ).value +=  _ ">
+    <br>
+    <input type="button" value="C" onclick="document.getElementById( display ).value =   ">
+    <input type="button" value="0" onclick="document.getElementById( display ).value +=  0 ">
+    <input type="button" value="=" onclick="document.getElementById( display ).value = eval(document.getElementById( display ).value)">
+    <input type="button" value="/" onclick="document.getElementById( display ).value +=  / ">
   </div>
+  <footer><li>00000000 </li><li>https://whatsapp.com/channel/0029VaKjSra9WtC0kuJqvl0g</li>
 
-  <div class="story">
-    <h2>The Uchiha Clan and Coding</h2>
-    <p>The Uchiha Clan is renowned for their exceptional abilities and Sharingan eye technique. In the world of coding, we strive to develop our own unique skills and techniques, just like the Uchiha Clan.</p>
-    <p>Programming and developing, like the Sharingan, allow us to perceive and understand the intricacies of technology. With each line of code we write, we unlock new possibilities and shape the digital world around us.</p>
-    <p>As the Uchiha Clan sought to protect and advance their abilities, we, as developers, aim to use our coding skills to create innovative solutions, build amazing projects, and contribute to the ever-evolving field of technology.</p>
-  </div>
+<li>https://cod3uchiha.github.io</li>
 
-  <div class="audio-controls">
-    <button id="play-btn" class="hacker-button">Play</button>
-    <button id="stop-btn" class="hacker-button">Stop</button>
-  </div>
-
-  <div class="contact-details">
-    <p>Contact me: <a href="https://wa.me/263785028126" style="color: #f00;">WhatsApp: +263785028126</a></p>
-    <p>GitHub: <a href="https://github.com/Cod3chiha" style="color: #f00;">github.com/Cod3chiha</a></p>
-    <p>Telegram: <a href="https://t.me/Code_Uchiha" style="color: #f00;">t.me/Code_Uchiha</a></p>
-    <p>WhatsApp Channel: <a href="https://whatsapp.com/channel/0029VaKjSra9WtC0kuJqvl0g" style="color: #f00;">Code Uchiha whatsapp Channel</a></p>
-    <p>WhatsApp Group: <a href="https://chat.whatsapp.com/KtKGYZuIK4BEGtHSbjc0yj" style="color: #f00;">Code Uchiha whatsapp Group</a></p>
-  </div>
-
-  <div class="copyright">
-    <p>&copy; CodeUchiha 2024</p>
-    <p>The song belongs to <b>Lil Nas X</b> I didn't mean to do wrong.</p>
-  </div>
+<li>https://cod3uchiha.tiiny.site/</li></footer>
 </body>
 </html>
